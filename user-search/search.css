@@ -1,14 +1,36 @@
+#info {
+    width: 50%;
+    outline: 2px solid black; /* Optional: to give an outline */
+    box-sizing: border-box; /* Ensures padding and border are inside the width */
+    padding: 10px;
+    overflow-wrap: break-word; /* Ensures long words wrap if they don't fit */
+}
+
+#input {
+    width: 100%; /* Ensure it takes full width of the parent */
+    overflow-wrap: break-word; /* Wrap long text/content inside the input div */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+#result-table {
+    border: 3px dashed green;
+    width: 100%; /* Use 100% to make sure the table stays within bounds */
+    min-height: 50%; /* Maintain 50% of the height */
+    table-layout: fixed; /* Ensures table columns are more likely to wrap */
+}
+
 .form-row {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    width: 50%;
+    flex-wrap: wrap; /* Allow the form fields to wrap if they don't fit in a row */
 }
 
 .form-group {
     flex: 1;
     display: flex;
     flex-direction: column;
+    min-width: 200px; /* Ensures the form groups don’t shrink too much */
 }
 
 label {
@@ -21,4 +43,6 @@ input[type="text"] {
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 100%; /* Ensure inputs don't overflow their containers */
+    word-wrap: break-word; /* Wrap long text inside inputs */
 }
