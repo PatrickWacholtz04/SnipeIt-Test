@@ -1,5 +1,10 @@
+body {
+    display: flex;
+    gap: 10px;
+}
 #info {
     width: 50%;
+    height: 100%;
     outline: 2px solid black; /* Optional: to give an outline */
     box-sizing: border-box; /* Ensures padding and border are inside the width */
     padding: 10px;
@@ -13,10 +18,20 @@
 }
 
 #result-table {
-    border: 3px dashed green;
+    border: 3px dashed lightslategray;
     width: 100%; /* Use 100% to make sure the table stays within bounds */
-    min-height: 50%; /* Maintain 50% of the height */
+    min-height: 25%; /* Maintain 50% of the height */
+    max-height: 50%;
     table-layout: fixed; /* Ensures table columns are more likely to wrap */
+    overflow-y: scroll;
+}
+
+#user-options {
+    width: 50%;
+    outline: 2px solid black;
+    box-sizing: border-box;
+    padding: 10px;
+    overflow-wrap: break-word;
 }
 
 .form-row {
@@ -30,7 +45,6 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    min-width: 200px; /* Ensures the form groups don’t shrink too much */
 }
 
 label {
@@ -45,4 +59,47 @@ input[type="text"] {
     border-radius: 4px;
     width: 100%; /* Ensure inputs don't overflow their containers */
     word-wrap: break-word; /* Wrap long text inside inputs */
+}
+
+input[type="reset"] {
+    margin-top: 5px;
+    border: 1px solid gray;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="reset"]:hover{
+    background-color: gainsboro;
+}
+
+.result-button {
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 75px;
+}
+
+.result-button:hover {
+    background-color: gainsboro;
+}
+
+.result-button table {
+    width: 100%;
+    min-height: 70px;
+    height: 100%;
+}
+
+.result-button td {
+    padding: 5px;
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
