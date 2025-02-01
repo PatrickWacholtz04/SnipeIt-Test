@@ -53,9 +53,9 @@ function result_populate(search_results) {
         let cell_name = row.insertCell(1);
         let cell_email = row.insertCell(2);
 
-        cell_id.textContent = "901765254";
-        cell_name.textContent = "Patrick Wacholtz";
-        cell_email.textContent = "patrick_wacholtz@mymail.eku.edu";
+        cell_id.textContent = "901012345";
+        cell_name.textContent = "First Last";
+        cell_email.textContent = "first_last@mymail.eku.edu";
 
         button.appendChild(table);
         container.appendChild(button);   // Add the button to the result list
